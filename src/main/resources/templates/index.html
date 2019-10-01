@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Employee Page</title>
+</head>
+<body>
+	<h1>Employee Page</h1>
+	<table border="1">
+		<tr>
+			<th>Employee ID</th>
+			<th>Name</th>
+			<th>Salary</th>
+		</tr>
+		<tr th:each="emp:${data}">
+			<td><a th:href="@{'/view/'+${emp.employeeId}}" th:text="${emp.employeeId}">id</a></td>
+			<td th:text="${emp.firstName}+' '+${emp.lastName}">Name</td>
+			<td th:text="${emp.salary}">empId</td>
+		</tr>
+	</table>
+</body>
+</html>

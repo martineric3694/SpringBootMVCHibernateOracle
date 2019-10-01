@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Detail Page</title>
+</head>
+<body>
+	<h1 th:text="'Detail : '+${emp.firstName}+' '+${emp.lastName}">detail</h1>
+	<table>
+		<tr>
+			<td>Employee ID</td><td th:text="${emp.employeeId}">id</td>
+		</tr>
+		<tr>
+			<td>First Name</td><td th:text="${emp.firstName}">id</td>
+		</tr>
+		<tr>
+			<td>Last Name</td><td th:text="${emp.lastName}">id</td>
+		</tr>
+	</table>
+</body>
+</html>
